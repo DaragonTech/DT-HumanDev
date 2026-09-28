@@ -88,6 +88,8 @@ The license governs AI-assisted development of the licensed Software and its der
 
 That distinction is part of the experiment.
 
+## Updates
+
 ### v0.3 — Dependency clarification
 
 Community feedback raised an important edge case: using an MIT-Human library shouldn't prevent AI-assisted development of software that merely depends on it.
@@ -95,6 +97,12 @@ Community feedback raised an important edge case: using an MIT-Human library sho
 v0.3 makes this explicit:
 
 **AI may use the software. AI may help develop software that uses it. AI may not develop the MIT-Human software itself.**
+
+### v0.4 — Simpler anti-circumvention wording
+
+Community feedback pointed out that the phrase "on its behalf" introduced an unnecessary concept of legal agency.
+
+v0.4 removes it and simplifies the rule: **AI may not provide project-specific instructions, guidance, or generated material for developing MIT-Human software or its derivatives.**
 
 ## Using the License
 
