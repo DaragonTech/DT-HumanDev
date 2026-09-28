@@ -1,3 +1,5 @@
+![MIT-Human-Logo](./mithuman-logo.png)
+
 # MIT No-AI Development License
 
 A small experiment in software licensing for the age of AI-assisted development.
