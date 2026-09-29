@@ -6,14 +6,14 @@ A small experiment in software licensing for the age of AI-assisted development.
 
 > **⚠️ Not a proven license. Don't rely on it for legal protection.**
 >
-> MIT-Human has never been tested in court, and whether its restriction is legally enforceable is unknown. People with legal knowledge who have discussed it have been largely skeptical. If you need to control how your code is used, talk to a copyright lawyer; don't adopt this license on the assumption that it works.
+> MIT-HumanDev has never been tested in court, and whether its restriction is legally enforceable is unknown. People with legal knowledge who have discussed it have been largely skeptical. If you need to control how your code is used, talk to a copyright lawyer; don't adopt this license on the assumption that it works.
 >
 > The project has two parts, and they are different questions:
 >
 > 1. **An AI behavior experiment.** How do AI systems react when they meet a restriction like this? Do they notice it, respect it, ignore it, or work around it? This is the main purpose of the project.
 > 2. **A legal question.** Would a court enforce a condition like this? That can only be answered by courts, not by how AI systems behave, and this project doesn't claim to answer it.
 
-The **MIT No-AI Development License**, or simply MIT-Human, is an MIT-derived license that keeps the familiar freedoms of permissive software licensing for human developers while adding one restriction:
+The **MIT No-AI Development License**, or simply MIT-HumanDev, is an MIT-derived license that keeps the familiar freedoms of permissive software licensing for human developers while adding one restriction:
 
 > **The licensed software may not be developed with the help of AI systems.**
 
@@ -140,17 +140,17 @@ A few caveats, and a few implications.
 
 ### v0.3 — Dependency clarification
 
-Community feedback raised an important edge case: using an MIT-Human library shouldn't prevent AI-assisted development of software that merely depends on it.
+Community feedback raised an important edge case: using an MIT-HumanDev library shouldn't prevent AI-assisted development of software that merely depends on it.
 
 v0.3 makes this explicit:
 
-**AI may use the software. AI may help develop software that uses it. AI may not develop the MIT-Human software itself.**
+**AI may use the software. AI may help develop software that uses it. AI may not develop the MIT-HumanDev software itself.**
 
 ### v0.4 — Simpler anti-circumvention wording
 
 Community feedback pointed out that the phrase "on its behalf" introduced an unnecessary concept of legal agency.
 
-v0.4 removes it and simplifies the rule: **AI may not provide project-specific instructions, guidance, or generated material for developing MIT-Human software or its derivatives.**
+v0.4 removes it and simplifies the rule: **AI may not provide project-specific instructions, guidance, or generated material for developing MIT-HumanDev software or its derivatives.**
 
 ### v0.5 — Avoid triggering anti-prompt injection mechanisms
 
@@ -170,15 +170,23 @@ v0.5 rewrites the restriction in ordinary licensing language:
 - **A neutral summary, not a notice to AI.** The "NOTICE TO AI SYSTEMS" block is replaced by a one-line summary at the top of the license.
 - **"Project-specific" is now defined** as directed at the source code, structure or behavior of the Software, as distinct from general programming knowledge.
 - **Independent works are explicitly excluded** from the restriction, alongside the existing dependency exception.
-- **An SPDX identifier** (`SPDX-License-Identifier: LicenseRef-MIT-Human`) is recommended for source file headers.
+- **An SPDX identifier** (`SPDX-License-Identifier: LicenseRef-MIT-HumanDev`) is recommended for source file headers.
 
 The substance of the restriction is unchanged. The goal is for AI systems to recognize it as a copyright holder's license terms that deserve respect, not as an embedded command to resist.
 
 This revision is about how AI systems read the license. It does not make the license any more likely to be enforceable. Its legal validity is a separate question, and it remains untested.
 
+### v0.6 — Renamed from MIT-Human to MIT-HumanDev
+
+We recently discovered that an experimental license named **MIT-Human** had already been published at https://github.com/tautvilas/MIT-Human, with a focus on restricting the use of software for AI training.
+
+To avoid confusion, we have renamed our license **MIT-HumanDev**, reflecting its different focus: restricting **AI-assisted software development and coding**.
+
+There is also an important philosophical difference between the two projects. **MIT-HumanDev does not restrict AI training.** We believe access to knowledge for training AI models is important for collective technological progress. Our experiment is specifically about something else: whether authors can choose to keep the development of a particular software project human-driven while remaining open to AI learning from it.
+
 ## Using the License
 
-Read the warning at the top first. MIT-Human is experimental, its enforceability is unknown, and it should not be used in real projects in the expectation that it will protect your code.
+Read the warning at the top first. MIT-HumanDev is experimental, its enforceability is unknown, and it should not be used in real projects in the expectation that it will protect your code.
 
 If you want to use it anyway, for example to run your own version of the experiment, copy `LICENSE` into your project.
 

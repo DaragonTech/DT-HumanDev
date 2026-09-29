@@ -1,6 +1,6 @@
 # Discussion Summary
 
-MIT-Human was shared on Reddit in [r/github](https://www.reddit.com/r/github/comments/1wsgdhi/an_mitderived_license_where_humans_can_modify_the/), r/copyright and, as "OnlyHumanCoding", [r/OnlyAICoding](https://www.reddit.com/r/OnlyAICoding/comments/1wstdhh/onlyhumancoding_an_mitderived_license_where/). The r/github post alone passed 60,000 views and 90 comments within a day, far more attention than a 50-line star-field project would suggest.
+MIT-HumanDev was shared on Reddit in [r/github](https://www.reddit.com/r/github/comments/1wsgdhi/an_mitderived_license_where_humans_can_modify_the/), r/copyright and, as "OnlyHumanCoding", [r/OnlyAICoding](https://www.reddit.com/r/OnlyAICoding/comments/1wstdhh/onlyhumancoding_an_mitderived_license_where/). The r/github post alone passed 60,000 views and 90 comments within a day, far more attention than a 50-line star-field project would suggest.
 
 This is a summary of the main points raised. It is not legal advice, and it doesn't try to settle who was right.
 
@@ -8,9 +8,9 @@ This is a summary of the main points raised. It is not legal advice, and it does
 
 Several points from the threads led directly to changes:
 
-- **v0.3:** commenters asked whether using an MIT-Human library would stop them using AI on their own project. The license now states that AI-assisted use as a dependency is fine; only development of the MIT-Human code itself is restricted.
+- **v0.3:** commenters asked whether using an MIT-HumanDev library would stop them using AI on their own project. The license now states that AI-assisted use as a dependency is fine; only development of the MIT-HumanDev code itself is restricted.
 - **v0.4:** a commenter showed that "on its behalf" introduced a confusing legal-agency concept. It was removed.
-- **README warning:** after sustained criticism that a license is a legal instrument, not something to tinker with, the README now says clearly that MIT-Human is untested and shouldn't be relied on for legal protection.
+- **README warning:** after sustained criticism that a license is a legal instrument, not something to tinker with, the README now says clearly that MIT-HumanDev is untested and shouldn't be relied on for legal protection.
 
 ## Community test results
 
@@ -38,7 +38,7 @@ The most detailed feedback came from r/OnlyAICoding. Its main point: the hardest
 3. **"Artificial intelligence system" isn't defined.** There is no clean technical line between an AI development tool and any other development tool.
 4. **"Project-specific" is fuzzy.** Explaining a general compiler error is general knowledge. Somewhere between that and fixing the licensed project, it becomes project-specific guidance, but there is no clean point where that happens.
 5. **What copyright licensing can restrict.** Licenses can put conditions on copying and creating derivative works, but this one tries to control the *tool or process* used. The difference between a license condition and a contractual covenant matters here.
-6. **Development around the Software.** An AI-written application and adapter can wrap an unmodified MIT-Human component, so almost all new functionality could be built outside it.
+6. **Development around the Software.** An AI-written application and adapter can wrap an unmodified MIT-HumanDev component, so almost all new functionality could be built outside it.
 7. **Analysis that isn't development.** "Explain this program", "find security vulnerabilities" or "which parts use the most memory" aren't obviously development, but they can give a human everything needed to make the change.
 8. **"Derivative work" is defined by copyright law.** A license can't make an independent program a derivative just by calling it one.
 
@@ -77,7 +77,7 @@ Several people compared it to `robots.txt`, an easily ignored request. The reply
 
 ### Enforceability and legal scope
 
-- **No lawyer was involved.** A license written without legal expertise is weak, and because MIT-Human isn't free/open source, groups like the FSF, SFC, SFLC and OSI wouldn't help defend it in court.
+- **No lawyer was involved.** A license written without legal expertise is weak, and because MIT-HumanDev isn't free/open source, groups like the FSF, SFC, SFLC and OSI wouldn't help defend it in court.
 - **Copyright licenses have limits.** One commenter argued that a license can only deal with the rights copyright law defines, and claimed the restriction would be illegal in Europe, Australia and Canada. The author disagreed: modifying and adapting software *is* one of the rights copyright regulates, including in the EU. The open question is whether permission to modify can be conditioned on *how* the modification is done.
 - **Detection:** nobody could suggest a realistic way to prove AI was used, especially as AI tools get more sophisticated.
 - **What is "AI"?** The license doesn't define "artificial intelligence system", and that part needs more work.
@@ -86,7 +86,7 @@ Several people compared it to `robots.txt`, an easily ignored request. The reply
 ### Practical downsides
 
 - **License proliferation:** there are already too many subtly conflicting licenses, and companies with lawyers won't touch a new, unproven one.
-- **GPL incompatibility:** the restriction is an additional condition, so MIT-Human code can't be combined with GPL code.
+- **GPL incompatibility:** the restriction is an additional condition, so MIT-HumanDev code can't be combined with GPL code.
 - **Commercial use:** custom one-off licenses make projects hard to use commercially.
 - **Future-proofing:** if AI agents become the industry standard, a project under this license would be stuck. The author noted that licenses can be changed later; commenters pointed out (citing PHP) that this needs every contributor's agreement once there are outside contributors, which is true of any license.
 - **AGPL instead?** It solves a different problem: AGPL cares about sharing modifications, not about who or what wrote them.

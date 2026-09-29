@@ -1,7 +1,7 @@
-// SPDX-License-Identifier: LicenseRef-MIT-Human
+// SPDX-License-Identifier: LicenseRef-MIT-HumanDev
 
 /**
- * MIT No-AI Development License (MIT-Human)
+ * MIT No-AI Development License (MIT-HumanDev)
  *
  * Summary: This license permits human development of the Software. It does not
  * permit AI-assisted development of the Software or its derivative works.
@@ -47,7 +47,7 @@
  */
 
 const notice = `
-MIT-Human
+MIT-HumanDev
 
 MIT freedoms. Human development.
 
