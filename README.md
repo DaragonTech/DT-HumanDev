@@ -25,6 +25,8 @@ The license also explicitly addresses a simple workaround where an AI refuses to
 
 It does **not** attempt to prohibit independent implementations of the same idea. An AI can still create unrelated software from scratch without using or deriving from the licensed source.
 
+It also allows one narrow use of AI on the licensed code: finding and fixing security vulnerabilities, as long as the fix is limited to what the vulnerability requires.
+
 ## Why?
 
 Mostly because this is an interesting boundary to explore.
@@ -193,6 +195,35 @@ The project is therefore renamed **DT-HumanDev**. **DT** refers to DaragonTech, 
 The license remains historically derived from the MIT License text, and that ancestry is documented here, but it is **not the MIT License, is not affiliated with or endorsed by MIT, and should not be understood as preserving MIT's licensing philosophy.** The AI-development restriction is a substantial departure from it.
 
 This is a naming and identity change, not a change to the core experiment.
+
+### v0.8 — Security exception
+
+Community feedback raised a practical problem: serious codebases are routinely checked with vulnerability scanners, and those tools increasingly use AI to find problems and suggest fixes. Under earlier versions, anyone developing DT-HumanDev code couldn't use them. AI-suggested fixes were clearly prohibited, and AI-based detection was at best a gray area.
+
+v0.8 adds a third exception to the restriction:
+
+> (c) use of an artificial intelligence system solely to identify security vulnerabilities in the Software or a derivative work, and to remediate a vulnerability so identified, provided that any resulting change is limited to what is necessary to remediate that vulnerability.
+
+It also defines the term:
+
+> "Security vulnerability" means a weakness that could be exploited to compromise the confidentiality, integrity, or availability of the Software or of systems that use it. It does not include other defects.
+
+In short: **AI may find and fix security vulnerabilities, and nothing more.**
+
+An earlier draft allowed AI to identify vulnerabilities but required a person to write every fix. That would have kept all code human-written, but it would also have left known vulnerabilities open for longer, and the people exposed by a slow fix are the software's users. The principle is now: human development, except where users' security is at stake.
+
+The exception is deliberately narrow:
+
+- **Security only.** It doesn't cover ordinary bugs, performance problems or code quality. A general "AI may analyze and fix defects" exception would allow most of debugging and undo the restriction.
+- **Minimal fixes only.** An AI-written patch may contain only what is needed to fix the vulnerability. It can't carry new features, refactoring or unrelated changes.
+
+Known limits:
+
+- "Necessary to remediate" is a judgment call, and someone could try to label ordinary changes as security work.
+- "Security vulnerability" will still have borderline cases.
+- Some AI-written code can now enter a DT-HumanDev project, which earlier versions didn't allow.
+
+As with every other revision, this changes what the license says, not whether it is enforceable.
 
 ## Using the License
 

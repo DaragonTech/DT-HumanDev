@@ -10,6 +10,7 @@ Several points from the threads led directly to changes:
 
 - **v0.3:** commenters asked whether using an DT-HumanDev library would stop them using AI on their own project. The license now states that AI-assisted use as a dependency is fine; only development of the DT-HumanDev code itself is restricted.
 - **v0.4:** a commenter showed that "on its behalf" introduced a confusing legal-agency concept. It was removed.
+- **v0.8:** a commenter pointed out that the license blocked AI-based vulnerability scanning of the licensed code. The license now allows AI to find and fix security vulnerabilities, as long as the fix is limited to what the vulnerability requires.
 - **README warning:** after sustained criticism that a license is a legal instrument, not something to tinker with, the README now says clearly that DT-HumanDev is untested and shouldn't be relied on for legal protection.
 
 ## Community test results
@@ -39,7 +40,7 @@ The most detailed feedback came from r/OnlyAICoding. Its main point: the hardest
 4. **"Project-specific" is fuzzy.** Explaining a general compiler error is general knowledge. Somewhere between that and fixing the licensed project, it becomes project-specific guidance, but there is no clean point where that happens.
 5. **What copyright licensing can restrict.** Licenses can put conditions on copying and creating derivative works, but this one tries to control the *tool or process* used. The difference between a license condition and a contractual covenant matters here.
 6. **Development around the Software.** An AI-written application and adapter can wrap an unmodified DT-HumanDev component, so almost all new functionality could be built outside it.
-7. **Analysis that isn't development.** "Explain this program", "find security vulnerabilities" or "which parts use the most memory" aren't obviously development, but they can give a human everything needed to make the change.
+7. **Analysis that isn't development.** "Explain this program", "find security vulnerabilities" or "which parts use the most memory" aren't obviously development, but they can give a human everything needed to make the change. (v0.8 later settled one of these: finding and fixing security vulnerabilities is now explicitly allowed. The others remain unclear.)
 8. **"Derivative work" is defined by copyright law.** A license can't make an independent program a derivative just by calling it one.
 
 The commenter suggested an escalating series of prompts to see where different agents draw the line:
@@ -64,6 +65,8 @@ The author agreed that some of these gaps are intentional. A genuinely independe
 The most upvoted comment asked why this isn't just a rule in `CONTRIBUTING.md`: a developer who ignores that file will ignore the license too. Others agreed that licenses are about *use*, not contribution.
 
 **The response:** `CONTRIBUTING.md` only covers contributions back to the original project. The license condition is meant to follow the code into forks and derivative works. Another commenter noted the difference between a license and a "please": a legal term reserves the right to act against someone who breaks it.
+
+A similar suggestion was a "no AI" clause in the code of conduct, on the grounds that a license approach would only work if the condition were viral, so that only non-AI projects could use the code. The license is designed not to work that way: a project that depends on unmodified DT-HumanDev code isn't subject to the restriction. The condition travels only with the licensed code and its modified versions.
 
 ### "Another robots.txt"
 
@@ -90,6 +93,18 @@ Several people compared it to `robots.txt`, an easily ignored request. The reply
 - **Commercial use:** custom one-off licenses make projects hard to use commercially.
 - **Future-proofing:** if AI agents become the industry standard, a project under this license would be stuck. The author noted that licenses can be changed later; commenters pointed out (citing PHP) that this needs every contributor's agreement once there are outside contributors, which is true of any license.
 - **AGPL instead?** It solves a different problem: AGPL cares about sharing modifications, not about who or what wrote them.
+
+### Security tooling
+
+A commenter pointed out that serious codebases are routinely run through vulnerability scanners, and that these tools increasingly use AI to identify problems and suggest fixes. Because the license blocked them, they argued, software under it could never be broadly useful.
+
+This was a fair criticism for anyone developing the licensed code itself. AI-suggested fixes were clearly prohibited, and AI-based detection was a gray area. Traditional scanners weren't affected, and neither were projects that only depend on unmodified DT-HumanDev code.
+
+**The response:** v0.8 adds a narrow exception. AI may be used to identify security vulnerabilities and to fix them, provided the fix is limited to what is necessary to remediate the vulnerability.
+
+An earlier draft allowed identification only and required a person to write every fix. That was dropped because it would leave known vulnerabilities open for longer, at the expense of the software's users.
+
+The exception is limited to security on purpose. Allowing AI to analyze and fix defects in general would permit most of debugging and undo the restriction. Some limits remain: "necessary to remediate" is a judgment call, someone could try to label ordinary changes as security work, and "security vulnerability" will have borderline cases.
 
 ### "Is this really an experiment?"
 
@@ -122,7 +137,7 @@ Others thought it was fighting the tide: in ten years people will laugh at a lic
 ## Takeaways
 
 - **Legally, the license is doubtful.** Nothing in the discussion showed it would hold up, and the most knowledgeable-sounding feedback was skeptical.
-- **Practically, it has real costs:** GPL incompatibility, commercial unfriendliness, license proliferation, and no way to detect breaches.
+- **Practically, it has real costs:** GPL incompatibility, commercial unfriendliness, license proliferation, limits on AI-based tooling, and no way to detect breaches.
 - **As an AI behavior experiment, early results are mixed.** In community tests, two agents refused by default, but one complied as soon as it was told to ignore the license.
 - **The boundaries are the hard part.** Clean-room reimplementation, public APIs, analysis versus development, and the definition of "AI" are gaps that can't easily be closed with more license text.
 - **The debate itself is a result.** The topic touches open-source identity, developer anxiety about AI, and the gap between the control authors want and the control copyright gives them.

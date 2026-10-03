@@ -23,8 +23,16 @@ knowledge not derived from the Software.
 
 This restriction does not apply to (a) use of the unmodified Software as a
 dependency, library, package, service, or other external component of another
-work, including AI-assisted use of its public interfaces and documentation; or
-(b) works created independently without use of or derivation from the Software.
+work, including AI-assisted use of its public interfaces and documentation;
+(b) works created independently without use of or derivation from the Software;
+or (c) use of an artificial intelligence system solely to identify security
+vulnerabilities in the Software or a derivative work, and to remediate a
+vulnerability so identified, provided that any resulting change is limited to
+what is necessary to remediate that vulnerability.
+
+"Security vulnerability" means a weakness that could be exploited to compromise
+the confidentiality, integrity, or availability of the Software or of systems
+that use it. It does not include other defects.
 
 Permission for AI-assisted development of the Software may be granted only by
 the copyright holder, in writing.
